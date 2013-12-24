@@ -1,4 +1,8 @@
-# MEAN Stack
+# 45 Record Tracker
+
+The 45 record tracker is a small app written to keep track of owned 45 records.  This allows members to be able to lookup which 45s are in their collection before buying duplicates.  It can be also used by friends to allow them to see each other's collections.
+
+The application is build on top of the MEAN reference [MEAN](http://www.mean.io). Default MEAN info below.
 
 MEAN is a boilerplate that provides a nice starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. It is designed to give you quick and organized way to start developing of MEAN based web apps with useful modules like mongoose and passport pre-bundled and configured. We mainly try to take care of the connection points between existing popular frameworks and solve common integration problems.  
 
@@ -118,18 +122,6 @@ If you are using node instead of grunt, it is very similar:
 ## Heroku Quick Deployment
 Before you start make sure you have <a href="https://toolbelt.heroku.com/">heroku toolbelt</a> installed and an accessible mongo db instance - you can try <a href="http://www.mongohq.com/">mongohq</a> which have an easy setup )
 
-```bash
-git init
-git add .
-git commit -m "initial version"
-heroku apps:create
-git push heroku master
-```
-
-## More Information
-  * Contact Amos Haviv on any issue via [E-Mail](mailto:mail@amoshaviv.com), [Facebook](http://www.facebook.com/amoshaviv), or [Twitter](http://www.twitter.com/amoshaviv).
-  * Visit us at [Linnovate.net](http://www.linnovate.net/).
-  * Visit our [Ninja's Zone](http://www.meanleanstartupmachine.com/) for extended support.
 
 ## Credits
 Inspired by the great work of [Madhusudhan Srinivasa](https://github.com/madhums/)
