@@ -1,0 +1,6 @@
+<section data-ng-controller="RecordsController" data-ng-init="findOne()">
+	<span>{{record.created | date:'medium'}}</span> /
+	<span>{{record.user.name}}</span>
+	<h2>{{record.artist}} <a data-ng-show="global.user._id == record.user._id" href="/#!/records/{{record._id}}/edit">edit</a></h2>
+	<div>{{record.sidea}}, {{record.sideb}}</div>
+</section>

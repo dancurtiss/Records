@@ -1,0 +1,34 @@
+<section data-ng-controller="RecordsController" data-ng-init="findOne()">
+	<form class="form-horizontal" data-ng-submit="update()">
+		<div class="control-group">
+			<label class="control-label" for="title">Artist</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="record.artist" id="artist" placeholder="Artist" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="sidea">Sides</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="record.sidea" id="sidea" placeholder="Side A" required>
+				</input>
+				<input type="text" data-ng-model="record.sideb" id="sideb" placeholder="Side B" required>
+				</input>
+			</div>
+		</div><div class="control-group">
+			<label class="control-label" for="year">Year</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="record.year" id="year" placeholder="Year" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>

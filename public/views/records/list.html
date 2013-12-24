@@ -1,0 +1,12 @@
+<section data-ng-controller="RecordsController" data-ng-init="find()">
+	<ul class="records unstyled">
+		<li data-ng-repeat="record in records">
+			<span>{{record.created | date:'medium'}}</span> /
+			<span>{{record.user.name}}</span>
+			<h2><a data-ng-href="#!/records/{{record._id}}">{{record.artist}} {{record.year}}</a></h2>
+			<div>{{record.sidea}}</div>
+			<div>{{record.sideb}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!records || records.length">No records yet. <br> Why don't you <a href="/#!/records/create">Add One</a>?</h1>
+</section>
