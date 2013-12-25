@@ -1,12 +1,31 @@
 <section data-ng-controller="RecordsController" data-ng-init="find()">
-	<ul class="records unstyled">
-		<li data-ng-repeat="record in records">
-			<span>{{record.created | date:'medium'}}</span> /
-			<span>{{record.user.name}}</span>
-			<h2><a data-ng-href="#!/records/{{record._id}}">{{record.artist}} {{record.year}}</a></h2>
-			<div>{{record.sidea}}</div>
-			<div>{{record.sideb}}</div>
-		</li>
-	</ul>
-	<h1 data-ng-hide="!records || records.length">No records yet. <br> Why don't you <a href="/#!/records/create">Add One</a>?</h1>
+	<div class="control-group">
+		<label class="control-label col-md-6" for="query">Search</label>
+
+		<div class="controls">
+			<input type="text" data-ng-model="query" id="query" placeholder="Search">
+			</input>
+		</div>
+	</div>
+	<table class="table table-striped">
+		<thead>
+			<th>Artist</th>
+			<th>Side A</th>
+			<th>Side B</th>
+			<th>Year</th>
+			<th>Added</th>
+			<th>Edit</th>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="record in records | filter:query">
+				<td>{{record.artist}}</td>
+				<td>{{record.sidea}}</td>
+				<td>{{record.sideb}}</td>
+				<td> {{record.year}}</td>
+				<td title="{{record.user.name}}">{{record.created | date:'shortDate'}}</td>
+				<td><a data-ng-href="#!/records/{{record._id}}">Edit</a></td>
+			</tr>
+		</tbody>
+	</table>
+		<h1 data-ng-hide="!records || records.length">No records yet. <br> Why don't you <a href="/#!/records/create">Add One</a>?</h1>
 </section>

@@ -1,4 +1,4 @@
-angular.module('mean.records').controller('RecordsController', ['$scope', '$routeParams', '$location', 'Global', 'Records', function ($scope, $routeParams, $location, Global, Records) {
+angular.module('mean.records').controller('RecordsController', ['$scope', '$routeParams', '$location', 'Global', 'Records','$notification', function ($scope, $routeParams, $location, Global, Records, $notification) {
     $scope.global = Global;
 
     $scope.create = function() {
@@ -9,7 +9,9 @@ angular.module('mean.records').controller('RecordsController', ['$scope', '$rout
             year: this.year
         });
         record.$save(function(response) {
-            $location.path("records/" + response._id);
+            //$location.path("records");
+            //Don't go anywhere just show that it was added.
+            $notification.success('Record Added', 'Record: ' + record.artist + ' was added to your list.', null);
         });
 
         this.artist = "";
@@ -36,7 +38,7 @@ angular.module('mean.records').controller('RecordsController', ['$scope', '$rout
         record.updated.push(new Date().getTime());
 
         record.$update(function() {
-            $location.path('records/' + record._id);
+            $location.path('records');
         });
     };
 
